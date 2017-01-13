@@ -8,4 +8,5 @@ a simple bot to book a meeting room using (ClaudiaJS)[https://github.com/claudia
 * Handle Slack Commands:
   * /book [room] [StartTime] [EndTime]
   * /find-rooms [StartTime] [EndTime]
+  * /rooms
   * /isFree [room]
