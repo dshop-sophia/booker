@@ -1,6 +1,6 @@
-const apiai = require('apiai');
-const Promise = require('promise');
-const app = apiai("YOUR_ACCESS_TOKEN");
+var apiai = require('apiai');
+var Promise = require('promise');
+var app = apiai("YOUR_ACCESS_TOKEN");
 
 
 module.exports = {
