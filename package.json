@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/dshop-sophia/booker/issues"
   },
-  "homepage": "https://github.com/dshop-sophia/booker#readme"
+  "homepage": "https://github.com/dshop-sophia/booker#readme",
+  "dependencies": {
+    "claudia-bot-builder": "^2.12.0"
+  }
 }
