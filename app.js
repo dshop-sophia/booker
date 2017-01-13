@@ -3,12 +3,17 @@ const Handler = require('./api/handler.js');
 
 module.exports = botBuilder(function (message) {
 
-  let type = message.type;
-  let sender = message.originalRequest.user_name;
-  let command = message.originalRequest.command;
-  let args = message.text.join(' ');
+  var type = message.type;
+  var sender = message.originalRequest.user_name;
+  var command = message.originalRequest.command;
+  var args = message.text.split(' ');
 
-  Handler.processCommand(command, args, sender).then(function(reply){
+  console.log('sender: ' + sender +  ' command: ' + command + ' args: ' + JSON.stringify(args));
+
+  return Handler.processCommand(command, args, sender).then(function(reply){
     return reply;
+  }).catch(function(error){
+    return error;
   });
+
 });

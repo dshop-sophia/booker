@@ -2,7 +2,6 @@ const apiai = require('apiai');
 const Promise = require('promise');
 const app = apiai("YOUR_ACCESS_TOKEN");
 
-
 module.exports = {
     process: function(input, intent) {
         return new Promise(function(resolve, reject) {
@@ -28,16 +27,16 @@ module.exports = {
         switch (command) {
           case '/book':
             if(!args.length){
-              reject('You should provide ')
+              reject('You should provide arguments!');
+            }else{
+              // TODO: Verify Arguments
+              var message = 'Hey ' + sender + ', I got your command ' + command + '. You sent me ' + args.length + ' argument(s)';
+              resolve(message);
             }
-
-            // TODO: Verify Arguments
-            var message = 'Hey ' + sender + ', I got your command ' + command + '. You sent me ' + args.length + ' argument(s)';
-            resolve(message);
             break;
           default:
             resolve('No Command, No execution !');
-          break;
+            break;
         }
       });
     }
