@@ -21,5 +21,24 @@ module.exports = {
             });
             request.end();
         });
+    },
+
+    processCommand: function(command, args, sender){
+      return new Promise(function(resolve, reject) {
+        switch (command) {
+          case '/book':
+            if(!args.length){
+              reject('You should provide ')
+            }
+
+            // TODO: Verify Arguments
+            var message = 'Hey ' + sender + ', I got your command ' + command + '. You sent me ' + args.length + ' argument(s)';
+            resolve(message);
+            break;
+          default:
+            resolve('No Command, No execution !');
+          break;
+        }
+      });
     }
 }
