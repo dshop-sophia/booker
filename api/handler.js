@@ -27,7 +27,7 @@ module.exports = {
         switch (command) {
           case '/book':
             if(!args.length){
-              reject('You should provide arguments!');
+              reject('You should provide room name, meeting subject, start and end time of the meeting!');
             }else{
               // TODO: Verify Arguments
               var message = 'Hey ' + sender + ', I got your command ' + command + '. You sent me ' + args.length + ' argument(s)';
