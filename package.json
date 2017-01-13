@@ -23,6 +23,8 @@
   },
   "homepage": "https://github.com/dshop-sophia/booker#readme",
   "dependencies": {
-    "claudia-bot-builder": "^2.12.0"
+    "apiai": "^3.0.3",
+    "claudia-bot-builder": "^2.12.0",
+    "promise": "^7.1.1"
   }
 }
