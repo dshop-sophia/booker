@@ -1,0 +1,11 @@
+{
+  "lambda": {
+    "role": "booker-executor",
+    "name": "booker",
+    "region": "us-east-1"
+  },
+  "api": {
+    "id": "flnm72p522",
+    "module": "app"
+  }
+}
