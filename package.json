@@ -1,0 +1,25 @@
+{
+  "name": "booker",
+  "version": "1.0.0",
+  "description": "Outlook Room Booking",
+  "main": "app.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dshop-sophia/booker.git"
+  },
+  "keywords": [
+    "outlook",
+    "booking",
+    "ai",
+    "bot"
+  ],
+  "author": "CodeWizards",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dshop-sophia/booker/issues"
+  },
+  "homepage": "https://github.com/dshop-sophia/booker#readme"
+}
