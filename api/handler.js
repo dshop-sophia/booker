@@ -9,19 +9,6 @@ module.exports = {
             // TODO: get answer from API.ai
             // TODO: depending on the intent, extra actions may be performed
 
-            switch (intent) {
-                case 'charge-car':
-                    // TODO: API request to know if there are free stations
-                    break;
-                case 'place-available':
-                    // TODO: API request to know if there are free stations
-                    break;
-                case 'time-to-wait':
-                    // TODO: provide info about waiting list
-                    break;
-                default:
-                break;
-            }
             var request = app.textRequest(input);
 
             request.on('response', function(response) {
