@@ -10,7 +10,7 @@ module.exports = {
       switch (command) {
         case '/book':
           if(!args.length){
-            reject('You should provide room name, meeting subject, start time and date and duration of the meeting!');
+            reject('You should provide room name, meeting subject, start time, start date and duration of the meeting!');
           }else{
             var roomName = args[0];
             var subject = args[1];
