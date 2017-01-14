@@ -1,7 +1,8 @@
 const apiai = require('apiai');
 const Promise = require('promise');
+const moment = require('moment');
 const app = apiai("YOUR_ACCESS_TOKEN");
-const Outlook = require('./outlook')
+const Outlook = require('./outlook');
 
 module.exports = {
     process: function(input, intent) {
@@ -29,33 +30,35 @@ module.exports = {
         switch (command) {
           case '/book':
             if(!args.length){
-              reject('You should provide room name, meeting subject, start and end time of the meeting!');
+              reject('You should provide room name, meeting subject, start time and date and duration of the meeting!');
             }else{
               var roomName = args[0];
               var subject = args[1];
-              var startTime = args[2];
-              var endTime = args[3];
+              var time = args[2];
+              var date = args[3];
+              var duration = args[4];
 
               // TODO: Verify Arguments
               Outlook.isRoom(args[0]).then(function(room){
-                if (Utils.isPeriod(startTime, endTime)) {
-                  Outlook.isFree(room, startTime, endTime).then(function(free){
+                if (Utils.isValid(start)) {
+
+                  Outlook.isFree(room, startTime, duration).then(function(free){
                     // TODO: book room
                     if(free){
                       reply = 'Hey ' + sender + ', I got your command ' + command + '. You sent me ' + args.length + ' argument(s)';
                     }else{
-                      reply = 'Sorry Bro, room is taken !'
+                      reply = 'Sorry Bro, room is already taken !'
                     }
                     resolve(reply);
                   });
                 }else{
-                  reject('Start and End times are not correct !');
+                  reject('Start time and not are not valid !');
                 }
               });
             }
             break;
           default:
-            resolve('No Command, No execution !');
+            resolve('No Command, No execution ! No Pain, No Gain !');
             break;
         }
       });

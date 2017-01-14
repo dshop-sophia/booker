@@ -25,6 +25,7 @@
   "dependencies": {
     "apiai": "^3.0.3",
     "claudia-bot-builder": "^2.12.0",
+    "moment": "^2.17.1",
     "promise": "^7.1.1"
   }
 }

@@ -23,7 +23,9 @@ module.exports = {
       })
     });
   },
-  isFree: function(room, start, end){
-    
+  isFree: function(room, start, duration){
+    return new Promise(function(resolve, reject) {
+      resolve(true);
+    });
   }
 }
