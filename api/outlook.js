@@ -12,7 +12,7 @@ module.exports = {
   },
   getRoomStatus: function(room){
 
-  }
+  },
   isRoom: function(room){
     return new Promise(function(resolve, reject) {
       // TODO: To be adapted when using real outlook api

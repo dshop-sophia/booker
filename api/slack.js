@@ -1,6 +1,7 @@
 const Promise = require('promise');
 const moment = require('moment');
 const Outlook = require('./outlook');
+const Utils = require('../Utils/utils');
 
 module.exports = {
   processCommand: function(command, args, sender){
@@ -20,7 +21,6 @@ module.exports = {
             // TODO: Verify Arguments
             Outlook.isRoom(args[0]).then(function(room){
               if (Utils.isValid(start)) {
-
                 Outlook.isFree(room, startTime, duration).then(function(free){
                   // TODO: book room
                   if(free){
