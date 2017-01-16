@@ -16,6 +16,6 @@ module.exports = {
   },
 
   isInFuture: function(date){
-    return date.isAfter(moment());
+    return moment(date).isAfter(moment());
   }
 }
