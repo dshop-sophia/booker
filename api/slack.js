@@ -4,7 +4,7 @@ const Outlook = require('./outlook');
 const Utils = require('../Utils/utils');
 
 module.exports = {
-  processCommand: function(command, args, sender){
+  processCommand: function(command, args, sender, env){
     return new Promise(function(resolve, reject) {
       var reply;
       switch (command) {
