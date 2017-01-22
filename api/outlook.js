@@ -17,9 +17,9 @@ module.exports = {
     getRoomStatus: function(room) {
 
     },
-    getRoomEvents: function(room) {
+    getRoomEvents: function(room, env) {
         // This is the oAuth token
-        var token = 'eyJ0eXAiOiJKV1Q...';
+        var token = env.outlookToken;
 
         // Set up oData parameters
         var queryParams = {

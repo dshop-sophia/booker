@@ -1,11 +1,11 @@
 const apiai = require('apiai');
 const Promise = require('promise');
 const moment = require('moment');
-const app = apiai("YOUR_ACCESS_TOKEN");
 const Slack = require('./slack');
 
 module.exports = {
-    reply: function(message) {
+    reply: function(message, env) {
+        const app = apiai(env.apiAiToken);
         var type = message.type;
         var sender = message.originalRequest.user_name;
         var command = message.originalRequest.command;
@@ -18,7 +18,7 @@ module.exports = {
         return new Promise(function(resolve, reject) {
             switch (message.type) {
                 case 'slack-slash-command':
-                    Slack.processCommand(command, args, sender).then(function(reply) {
+                    Slack.processCommand(command, args, sender, env).then(function(reply) {
                         resolve(reply);
                     }).catch(function(error) {
                         reject(error);
