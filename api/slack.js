@@ -12,6 +12,7 @@ module.exports = {
           if(!args.length){
             reject('You should provide room name, meeting subject, start time, start date and duration of the meeting!');
           }else{
+            var roomName = args[0];
             reply = 'Hey ' + sender + ', I got your request to book ' + roomName + '. Unfortuantely, the guys are not working on this repository, so I don\'t know how to book a room !';
             resolve(reply);
             /*

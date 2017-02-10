@@ -13,7 +13,9 @@ const api = botBuilder(function (message, originalApiRequest) {
   platforms: ['slackSlashCommand']
 });
 
+/*
 api.addPostDeployConfig('apiAiToken', 'Enter your API.ai token:', 'configure-bot');
 api.addPostDeployConfig('outlookToken', 'Enter your Outlook token:', 'configure-bot');
+*/
 
 module.exports = api;
