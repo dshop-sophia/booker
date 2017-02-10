@@ -12,6 +12,9 @@ module.exports = {
           if(!args.length){
             reject('You should provide room name, meeting subject, start time, start date and duration of the meeting!');
           }else{
+            reply = 'Hey ' + sender + ', I got your request to book ' + roomName + '. Unfortuantely, the guys are not working on this repository, so I don\'t know how to book a room !';
+            resolve(reply);
+            /*
             var roomName = args[0];
             var subject = args[1];
             var time = args[2];
@@ -34,6 +37,7 @@ module.exports = {
                 reject('Start time and not are not valid !');
               }
             });
+            */
           }
           break;
         default:
